@@ -35,7 +35,7 @@ export default function ColorDisplay({
             </button>
           ))}
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[250px]">
+        <DialogContent className="sm:max-w-[200px]" hideCloseButton>
           {openColorIndex !== null && (
             <ColorPicker
               color={colors[openColorIndex]}
@@ -45,22 +45,6 @@ export default function ColorDisplay({
           )}
         </DialogContent>
       </Dialog>
-
-      {/* <Dialog.Root
-        open={openColorIndex !== null}
-        onOpenChange={() => setOpenColorIndex(null)}
-      >
-        <Dialog.Overlay></Dialog.Overlay>
-        <Dialog.Content>
-          {openColorIndex !== null && (
-            <ColorPicker
-              color={colors[openColorIndex]}
-              index={openColorIndex}
-              onChange={handleColorChange}
-            ></ColorPicker>
-          )}
-        </Dialog.Content>
-      </Dialog.Root> */}
     </div>
   );
 }
